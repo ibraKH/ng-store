@@ -1,0 +1,16 @@
+<div class="card" style="width: 18rem; margin: 25px;">
+    <img src="{{ product.url }}" class="card-img-top" alt="..." (click)="goToDetails()">
+    <div class="card-body">
+      <h5 class="card-title">{{ product.name }}</h5>
+      <p class="card-text">${{ product.price }}</p>
+      <form (ngSubmit)="submitForm()">
+        <div class="selectContainer">
+          <select class="form-select" aria-label="Quantity" name="quantity" [(ngModel)]="quantity">
+            <option *ngFor="let value of defaultQuantity; let index = index" value="{{ index + 1 }}">{{ index + 1 }}</option>
+          </select>
+        </div>
+        <button class="btn btn-color" style="margin: 5px;" type="submit">Add to cart</button>
+      </form>
+      <a routerLink="/product/{{ product.id }}" class="btn btn-light">Details</a>
+    </div>
+</div>

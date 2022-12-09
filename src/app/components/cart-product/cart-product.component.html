@@ -1,0 +1,19 @@
+<div class="products">
+    <div class="pImage">
+        <img src="{{ product.url }}" alt="product image">
+    </div>
+    <div class="pDetail">
+        <div>
+            <div>
+                <h4>{{ product.name }}</h4>
+            </div>
+            <div>
+                <h4>{{ product.price }}</h4>
+            </div>
+            <div>
+                <p>Amount : </p>
+                <input type="number" value="{{ product.quantity }}" class="amount" min="0" (change)="changeQuantity($event)"/>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+input{
+    width: 240px;
+    margin-bottom: 5px;
+    border: none;
+}
+.inputs.ng-invalid{
+    border-left: 4px solid red;
+    border-radius: 2px;
+}
+.inputs.ng-valid{
+    border-left: 4px solid rgb(153, 255, 0);
+    border-radius: 2px;
+}

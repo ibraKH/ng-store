@@ -1,0 +1,36 @@
+.products{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    margin-bottom: 10px;
+}
+.products img{
+    width: 150px;
+    border-radius: 20px;
+}
+.pImage{
+    float: left;
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    height: 250px;
+    border-radius: 5px;
+}
+.pDetail{
+    float: right;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.amount{
+    width: 100px;
+    height: 38px;
+    border-radius: 5px;
+}

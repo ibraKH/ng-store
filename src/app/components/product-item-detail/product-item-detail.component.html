@@ -1,0 +1,21 @@
+<div class="productDetail">
+    <div class="productImage">
+        <img src="{{ product.url }}" alt="product image">
+    </div>
+    <div class="details">
+        <h2>{{ product.name }}</h2>
+        <p>${{ product.price }}</p>
+        <h6 class="gray">{{ product.description }}</h6>
+        <form (ngSubmit)="submitForm()">
+            <div class="selectContainer">
+                <select class="form-select" aria-label="Quantity" name="quantity" [(ngModel)]="quantity">
+                    <option *ngFor="let value of defaultQuantity; let index = index" value="{{ index + 1 }}">{{ index + 1 }}</option>
+                </select>
+            </div>
+            <button class="btn btn-color" style="margin: 5px;" type="submit">Add to cart</button>
+        </form>
+        <a routerLink="/" class="btn btn-light">Go Back</a>
+    </div>
+</div>
+    
+    

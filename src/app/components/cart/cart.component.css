@@ -1,0 +1,24 @@
+.cart{
+    position: relative;
+    height: 90vh;
+    color: white;
+}
+.payment{
+    width: 50%;
+    position: fixed;
+    right: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cartProducts{
+    margin-top: 50px;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}

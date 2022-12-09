@@ -1,0 +1,22 @@
+.confirmation{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.success{
+    color: #00A6ED;
+}
+b{
+    font-weight: bold;
+    color: bisque;
+}
+h1{
+    margin-bottom: 5px;
+}
+a{
+    margin-top: 25px;
+}

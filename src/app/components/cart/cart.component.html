@@ -1,0 +1,9 @@
+<div class="cart">
+    <div class="cartProducts">
+        <app-cart-product *ngFor = "let product of cart" [product]="product" (updateProduct)="update($event)"></app-cart-product>
+        <h1>The total : ${{ total }}</h1>
+    </div>
+    <div class="payment">
+        <app-payment></app-payment>
+    </div>
+</div>
