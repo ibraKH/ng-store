@@ -4,6 +4,8 @@ in this project i created Store project using Angular.
 
 the udacity project starter code [repo](https://github.com/udacity/nd-0067-c3-angular-fundamentals-project-starter)
 
+Note : Product list [api](https://raw.githubusercontent.com/udacity/nd-0067-c3-angular-fundamentals-project-starter/main/src/assets/data.json)
+
 ## Tech used :
 - Angular 
 - TypeScript
@@ -17,7 +19,7 @@ the udacity project starter code [repo](https://github.com/udacity/nd-0067-c3-an
 - $ ng serve
 
 ## Pages :
-Product List : http://localhost:4200/
-Product Details : http://localhost:4200/product/:id
-Cart : http://localhost:4200/cart
-Payment Confirmation : http://localhost:4200/confirmation
+Product List : http://localhost:4200/ <br />
+Product Details : http://localhost:4200/product/:id <br />
+Cart : http://localhost:4200/cart <br />
+Payment Confirmation : http://localhost:4200/confirmation <br />
