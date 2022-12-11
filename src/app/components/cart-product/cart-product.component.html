@@ -12,7 +12,7 @@
             </div>
             <div>
                 <p>Amount : </p>
-                <input type="number" value="{{ product.quantity }}" class="amount" min="0" (change)="changeQuantity($event)"/>
+                <input type="number" value="{{ this.quantity }}" class="amount" min="0" name="quantity" [(ngModel)]="quantity" (ngModelChange)="changeQuantity($event)"/>
             </div>
         </div>
     </div>

@@ -3,11 +3,14 @@ input{
     margin-bottom: 5px;
     border: none;
 }
-.inputs.ng-invalid{
+.inputs.ng-invalid.ng-touched{
     border-left: 4px solid red;
     border-radius: 2px;
 }
-.inputs.ng-valid{
+.inputs.ng-valid.ng-touched{
     border-left: 4px solid rgb(153, 255, 0);
     border-radius: 2px;
+}
+.warning{
+    color: rgb(255, 81, 81);
 }

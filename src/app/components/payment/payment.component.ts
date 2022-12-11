@@ -22,6 +22,9 @@ export class PaymentComponent implements OnInit{
 
   user : User;
 
+  cardValue : string = '';
+  isNumber = true;
+
   submitted = false;
 
   constructor(private router : Router, private createUser : UserService){
@@ -40,7 +43,7 @@ export class PaymentComponent implements OnInit{
     this.submitted = true;
 
     // complete payment only if form is valid
-    if(this.cardForm.valid){
+    if(this.cardForm.valid && this.isNumber){
       this.user = {
         name: this.cardForm.value.name || '',
         address: this.cardForm.value.address || '',
@@ -51,5 +54,9 @@ export class PaymentComponent implements OnInit{
       // go to confirmation page
       this.router.navigate(['/', 'confirmation'])
     }
+  }
+
+  numberValidate() : void {
+    /^\d+$/.test(this.cardValue) ? this.isNumber = true : this.isNumber = false;
   }
 }

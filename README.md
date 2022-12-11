@@ -11,6 +11,24 @@ Note : Product list [api](https://raw.githubusercontent.com/udacity/nd-0067-c3-a
 - TypeScript
 - Bootstrap
 
+## Models :
+- Product : id , name , price , url , description
+- Cart : id , name , price , url , description , quantity
+- User : name , address , card
+
+## Services :
+- Cart : used to save and display products in the cart
+- Products : used to store all products from external API
+- User : used to save and display users
+
+## Components and routes :
+Note : this ">" indicate parent to child relationship
+- NavBar components is used in all routes
+- Home page : product-list > product-item : ProductsService, CartService
+- Details page : product-item-detail : CartService
+- Cart : Cart > payment , cart-product : CartService , UserService
+- confirmation : CartService , UserService
+
 ## To start the project :
 - $ git clone https://github.com/ibraKH/ng-store.git
 - $ cd ng-store

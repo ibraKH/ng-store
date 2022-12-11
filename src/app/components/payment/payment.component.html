@@ -3,21 +3,24 @@
         <h5>Full name</h5>
         <input type="text" required minlength="3" name="name" formControlName="name" class="inputs" />
         <div *ngIf="submitted && cardForm.controls.name.errors">
-            <p>Please Write you name at least 3 characters</p>
+            <p class="warning">Please Write you name at least 3 characters</p>
         </div>
     </div>
     <div>
         <h5>Address</h5>
         <input type="text" required minlength="6" name="address" formControlName="address" class="inputs"/>
         <div *ngIf="submitted && cardForm.controls.address.errors">
-            <p>Please Write you address at least 6 characters</p>
+            <p class="warning">Please Write you address at least 6 characters</p>
         </div>
     </div>
     <div>
         <h5>Credit card number</h5>
-        <input type="text" maxlength="16" required placeholder="16 Digit Number" name="card" minlength="16" formControlName="card" class="inputs" />
-        <div *ngIf="submitted && cardForm.controls.card.errors">
-            <p>Please Write you card at least 16 digits</p>
+        <input type="text" maxlength="16" required placeholder="16 Digit Number" name="card" minlength="16" formControlName="card" class="inputs" [(ngModel)]="cardValue" (ngModelChange)="numberValidate()" />
+        <div *ngIf="submitted && cardForm.controls.card.errors && cardForm.controls.card.errors">
+            <p class="warning">Please Write you card at least 16 digits</p>
+        </div>
+        <div *ngIf="!isNumber && cardValue.length > 0">
+            <p class="warning">Please Write only numbers</p>
         </div>
     </div>
     <p>Your data is secured</p>

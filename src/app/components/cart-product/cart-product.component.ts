@@ -12,6 +12,7 @@ export class CartProductComponent implements OnInit {
   // send product with new quantity
   @Output() updateProduct = new EventEmitter<Cart>();
 
+  quantity : string = '';
 
   constructor() {
     this.product = {
@@ -25,11 +26,10 @@ export class CartProductComponent implements OnInit {
   }
 
   ngOnInit(): void {
-      
+      this.quantity = this.product.quantity.toString();
   }
 
   changeQuantity(event : any) : void {
-    let quantity = event.target.value;
     
     const updatedProduct : Cart = {
       id : this.product.id,
@@ -37,7 +37,7 @@ export class CartProductComponent implements OnInit {
       price : this.product.price,
       url : this.product.url,
       description : this.product.description,
-      quantity : quantity
+      quantity : parseInt(this.quantity)
     }
     
     // This used to send the product with new values to the parent
